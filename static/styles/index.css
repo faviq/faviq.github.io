@@ -1,6 +1,6 @@
 body {
-  margin:0;
-  font-family: Georgia, serif;
+  margin:0; 
+  font-family: 'Noto Sans KR', sans-serif;;
   font-size: 16px;
 }
 #container {
@@ -24,20 +24,21 @@ body {
   font-style: italic;
 }
 hr {
-  border: white 1px solid;
+  /* border: white 1px solid; */
+  border-top: 1px solid #dddddd;
 }
 #navbar {
   overflow: hidden;
-  background-color: #5540a3;
+  background-color: #570438;
   top: 0;
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 7px;
   z-index: 10;
   color: white;
   position: fixed;
 }
 #navbar p {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 #navbar a {
   color: inherit;
@@ -73,7 +74,7 @@ hr {
 #menu-list > button {
   display: inline-block;
   float: right;
-  margin: 25px 5px 20px 5px;
+  margin: 25px 5px 25px 5px;
   background-color: Transparent;
   background-repeat:no-repeat;
   border: none;
@@ -107,7 +108,7 @@ hr {
   cursor: pointer;
 }
 .textbox-clicked {
-  border: #fb8072 solid 2px;
+  border: #EC1434 solid 2px;
 }
 blockquote {
   font-size: inherit;
@@ -127,6 +128,9 @@ blockquote {
 }
 .panel-heading, .panel-body {
   padding: 5px;
+  color: #333333;
+  border: 2px solid #6B5B64;
+  border-radius: 20px;
 }
 .label-simple {
   background-color: white;
@@ -139,9 +143,9 @@ blockquote {
   padding: 20px;
   padding-left: 20px;
 }
-.readme {
+/* .readme {
   margin-left: 1em;
-}
+} */
 .container a {
   color: #5540a3;
 }
@@ -163,7 +167,7 @@ blockquote {
   margin: 30px;
   margin-left: auto;
   margin-right: auto;
-  //max-width: 90%;
+  /* //max-width: 90%; */
 }
 #intro-content {
   margin-left: auto;
@@ -208,3 +212,59 @@ h3 {
   padding: 10px;
 }
 
+.panel-heading{
+  background-color: #570438;
+  color:#fff;
+  border: 2px solid #FFF;
+}
+
+.panel-default > .panel-heading{
+  background-color: #6B5B64;
+  background-image: none;
+  color:#fff;
+  border: 2px solid #FFF;
+}
+
+.panel-default {
+
+  border-color: #fff;
+}
+
+.myBtn{
+  width: 100%;
+  border: 2px solid #6B5B64;
+  border-radius: 18px;
+  background-color: #6B5B64;
+  color: #FFFFFF !important;
+  text-align: center;
+  /* margin: 0px 30px 0px 30px; */
+}
+
+.myCardCell{
+  /* padding: 0px 20px 0px 20px; */
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+}
+
+.readme{
+  text-align: center;
+
+}
+
+
+.label-id {
+  background-color:#69501C
+}
+
+.label-title {
+  background-color:#906D27
+}
+
+.label-text {
+  background-color:#CD9B37
+}
+
+.mode-container > .radio-box-container {
+  background-color:#CD9B37
+}
