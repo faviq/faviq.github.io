@@ -21,7 +21,7 @@
   function loadAllData(){
     $('.textbox').width($('#sidebar').width());
     loadData();
-    // $.getJSON("https://github.com/JJumSSu/test/blob/main/all_set_web.json", function(json) {
+    // $.getJSON("samples.json", function(json) {
     //   allData = json;
     //   loadData();
     // });
