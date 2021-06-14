@@ -23,14 +23,14 @@
         <h3>About</h3>
         <br>
         <p> 
-        <b>FA</b>ct <b>V</b>erification from <b>I</b>nformation seeking <b>Q</b>uestions (<b><span style="font-variant:small-caps;">FaVIQ<span></b>) is a challenging and realistic fact verification dataset, 
+        <b>FA</b>ct <b>V</b>erification from <b>I</b>nformation seeking <b>Q</b>uestions (<b>FaVIQ</b>) is a challenging and realistic fact verification dataset, 
         consisting of claims transformed from information-seeking questions by a pre-trained language model.
         Specifically, we use the ambiguity in information-seeking questions and their disambiguation and automatically convert them to true and false claims.
         These claims are natural and verifying these claims requires a complete understanding of the evidence.
         </p>
         <blockquote>
           Jungsoo Park, Sewon Min, Jaewoo Kang, Luke Zettlemoyer, Hannaneh Hajishirzi.
-          <a href="` + references["ours"] + `" target="_blank">"<span style="font-variant:small-caps;">FaVIQ<span>: FAct Verification from Information seeking Questions"</a>.
+          <a href="` + references["ours"] + `" target="_blank">"FaVIQ: FAct Verification from Information seeking Questions"</a>.
           [<a href="` + references["ours-bibtex"] + `" target="_blank">BibTeX</a>]
         </blockquote>
       `);
