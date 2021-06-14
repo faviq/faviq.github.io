@@ -23,7 +23,7 @@
         <h3>About</h3>
         <br>
         <p> 
-        <b>FA</b>ct <b>V</b>erification from <b>I</b>nformation seeking <b>Q</b>uestions (<b>FaVIQ</b>) is a challenging and realistic fact verification dataset, 
+        <b>Fa</b>ct <b>V</b>erification from <b>I</b>nformation seeking <b>Q</b>uestions (<b>FaVIQ</b>) is a challenging and realistic fact verification dataset, 
         consisting of claims transformed from information-seeking questions by a pre-trained language model.
         Specifically, we use the ambiguity in information-seeking questions and their disambiguation and automatically convert them to true and false claims.
         These claims are natural and verifying these claims requires a complete understanding of the evidence.
@@ -38,7 +38,7 @@
       // load download cards
       let card1 = loadDownloadCard("A Set [train/dev] (13MB)");
       let card2 = loadDownloadCard("R Set [train/dev/test] (205MB)");
-      let card3 = loadDownloadCard("Wikipedia DB (jsonl format, 10GB)");
+      let card3 = loadDownloadCard_single("Wikipedia DB (jsonl format, 10GB)");
       $('#intro-content').append('<hr>');
       $('#intro-content').append(`
         <h3>Data</h3>
@@ -108,6 +108,19 @@
       <a href="` + url + `" class="btn myBtn">` + `<i class="fa fa-download"></i>    ` +  `<b>` + title + `</b>` + `</a>
     </div>`
   }
+
+  function loadDownloadCard_single(title, text, url, mem) {
+    // return `<div class="panel panel-default panel-inline download-card" style="float: left">
+    //   <div class="panel-heading"><a href="` + url + `">
+    //     ` + title + ` </a>
+    //   </div>     
+    // </div>`;
+    // return '<a href="' + url + '" class="btn myBtn">' + title + '</a>' 
+    return `<div class="myCardCell">
+      <a href="` + url + `" class="btn myBtn">` + `<i class="fa fa-download"></i>    ` +  `<b>` + title + `</b>` + `</a>
+    </div>`
+  }
+
 
   function loadGithubLink(title, legend) {
     return `<a href="` + github + `/#` + legend + `" target="_blank">` + title + `</a>`;
