@@ -2,16 +2,16 @@
 
   var allData
 
-  let github = "https://github.com/shmsw25/AmbigQA"
+  let github = "https://github.com/faviq/faviq"
 
   let references = {
     "nq": "https://www.mitpressjournals.org/doi/pdf/10.1162/tacl_a_00276",
     "ambigQA": "https://arxiv.org/pdf/2004.10645.pdf",
-    "ours": "https://arxiv.org/pdf/2004.10645.pdf",
-    "ours-bibtex": "https://shmsw25.github.io/assets/bibtex/min2020ambigqa.txt",
+    "ours": "",
+    "ours-bibtex": "",
     "dpr": "https://arxiv.org/pdf/2004.04906.pdf",
     "drqa_github": "https://github.com/facebookresearch/DrQA/tree/master/scripts/retriever",
-    "explore":"explore.html",
+    "explore":"https://faviq.github.io/explorer.html",
     "kilt":"https://arxiv.org/pdf/2009.02252.pdf"
   };
 
@@ -23,28 +23,28 @@
         <h3>About</h3>
         <br>
         <p> 
-        <b>Fa</b>ct <b>V</b>erification from <b>I</b>nformation seeking <b>Q</b>uestions (<b>FaVIQ</b>) is a challenging and realistic fact verification dataset, 
+        <b>FA</b>ct <b>V</b>erification from <b>I</b>nformation seeking <b>Q</b>uestions (<b><span style="font-variant:small-caps;">FaVIQ<span></b>) is a challenging and realistic fact verification dataset, 
         consisting of claims transformed from information-seeking questions by a pre-trained language model.
-        Since information-seeking questions are inhenrently incomplete, the confusion (e.g., ambiguity) is arisen from real users.
-        <b>FaVIQ</b> reflects such ambiguiuty, having claims with realistic and implicit information.
+        Specifically, we use the ambiguity in information-seeking questions and their disambiguation and automatically convert them to true and false claims.
+        These claims are natural and verifying these claims requires a complete understanding of the evidence.
         </p>
         <blockquote>
           Jungsoo Park, Sewon Min, Jaewoo Kang, Luke Zettlemoyer, Hannaneh Hajishirzi.
-          <a href="` + references["ours"] + `" target="_blank">"FaVIQ: Fact Verification from Information seeking Questions"</a>.
+          <a href="` + references["ours"] + `" target="_blank">"<span style="font-variant:small-caps;">FaVIQ<span>: FAct Verification from Information seeking Questions"</a>.
           [<a href="` + references["ours-bibtex"] + `" target="_blank">BibTeX</a>]
         </blockquote>
       `);
 
       // load download cards
-      let card1 = loadDownloadCard("A Set [train/dev] (40MB)");
-      let card2 = loadDownloadCard("D Set [train/dev/test] (40MB)");
+      let card1 = loadDownloadCard("A Set [train/dev] (13MB)");
+      let card2 = loadDownloadCard("R Set [train/dev/test] (205MB)");
       let card3 = loadDownloadCard("Wikipedia DB (jsonl format, 10GB)");
       $('#intro-content').append('<hr>');
       $('#intro-content').append(`
         <h3>Data</h3>
         <br>
         <p>
-        The data consists of <b>A set</b>  and <b>D set</b>, where the former has 26k claims converted from ambiguous questions in <a href="` + references["ambigQA"] + `" target="_blank">AmbigQA</a> and
+        The data consists of <b>A set</b>  and <b>R set</b>, where the former has 26k claims converted from ambiguous questions in <a href="` + references["ambigQA"] + `" target="_blank">AmbigQA</a> and
         the latter has 188k claims converted from <a href="` + references["nq"] + `" target="_blank">NQ</a>.
         A single instance (in json format) consists of claim, label, and evidence texts (both in positive and negative) used to train 
         <a href="` + references["dpr"] + `" target="_blank">DPR</a> retriever module.
@@ -63,11 +63,12 @@
         <p>
         For solving the fact verification task, an external knowledge source is required. 
         We use the English Wikipedia from 08/01/2019 following <a href="` + references["kilt"] + `" target="_blank">KILT</a> where we modified the original version 
-        for creating a collection of passages each having approximately 100 tokens.
+        for creating a collection of passages each having approximately 100 tokens. 
+        Note that for experiments in our paper, we concatenated the title with the passage.
         </p>
         <br>
       `);
-      $('#intro-content').append("<div class='readme row' style='margin-top: 10px;'>" + card3  + "</div>");
+      $('#intro-content').append("<div class='readme row' style='width: 50%; margin: 0 auto;'>" + card3  + "</div>");
       $('#intro-content').append('<hr>');
       $('.panel').width($('#intro-content').width()/3-30);
       $('.panel').css("margin-right", "10px");
@@ -87,8 +88,9 @@
         <h3>Contact</h3>
         <br>
         <p style="font-size:18px">
-          For any questions about the code or data, please contact Jungsoo Park
-          (<a class="icons-sm email-ic" href="mailto:jungsoopark.1993@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i> Email</a>)
+          For any questions about the code or data, please contact Jungsoo Park(<a class="icons-sm email-ic" href="mailto:jungsoopark.1993@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i> Email</a>)
+          or Sewon Min
+          (<a class="icons-sm email-ic" href="mailto:sewon@cs.washington.edu" target="_blank"><i class="fa fa-envelope-o"></i> Email</a>)
           or leave <a href="` + github + `/issues"><i class="fa fa-github"></i> issues</a>.
         </p>
       `);
