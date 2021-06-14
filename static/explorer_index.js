@@ -21,7 +21,7 @@
   function loadAllData(){
     $('.textbox').width($('#sidebar').width());
 
-    $.getJSON("data/samples.json", function(json) {
+    $.getJSON("https://raw.githubusercontent.com/faviq/faviq.github.io/main/static/samples.json", function(json) {
       allData = json; 
       loadData();
     });
