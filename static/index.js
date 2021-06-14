@@ -38,7 +38,7 @@
       // load download cards
       let card1 = loadDownloadCard("A Set [train/dev] (13MB)");
       let card2 = loadDownloadCard("R Set [train/dev/test] (205MB)");
-      let card3 = loadDownloadCard_single("Wikipedia DB (jsonl format, 10GB)");
+      let card3 = loadDownloadCard_single("WikipediaDB.jsonl (10GB)");
       $('#intro-content').append('<hr>');
       $('#intro-content').append(`
         <h3>Data</h3>
