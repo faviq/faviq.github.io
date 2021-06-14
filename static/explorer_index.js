@@ -20,7 +20,8 @@
 
   function loadAllData(){
     $('.textbox').width($('#sidebar').width());
-    $.getJSON("samples.json", function(json) {
+
+    $.getJSON("data/samples.json", function(json) {
       allData = json; 
       loadData();
     });
