@@ -20,8 +20,8 @@
 
   function loadAllData(){
     $('.textbox').width($('#sidebar').width());
-    $.getJSON("https://github.com/faviq/faviq.github.io/blob/main/static/samples.json", function(json) {
-      allData = alert(json.responseData.resultText); 
+    $.getJSON("samples.json", function(json) {
+      allData = json; 
       loadData();
     });
     /*
