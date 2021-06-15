@@ -11,7 +11,7 @@
     "ours-bibtex": "https://raw.githubusercontent.com/faviq/faviq/main/park2021faviq.txt",
     "dpr": "https://arxiv.org/pdf/2004.04906.pdf",
     "drqa_github": "https://github.com/facebookresearch/DrQA/tree/master/scripts/retriever",
-    "explore":"https://faviq.github.io/explorer.html",
+    "explorer":"https://faviq.github.io/explorer.html",
     "kilt":"https://arxiv.org/pdf/2009.02252.pdf",
     "readme":"https://github.com/faviq#faviq",
     "baselines":"https://github.com/faviq/faviq/tree/main/codes",
@@ -135,11 +135,6 @@
     return `<div class="myCardCell">
       <a href="` + url + `" class="btn myBtn">` + `<i class="fa fa-download"></i>    ` +  `<b>` + title + `</b>` + `</a>
     </div>`
-  }
-
-
-  function loadGithubLink(title, legend) {
-    return `<a href="` + github + `/#` + legend + `" target="_blank">` + title + `</a>`;
   }
 
   function loadCitation(citation, keyword) {
