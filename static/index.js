@@ -70,6 +70,7 @@
       $('#intro-content').append('<hr>');
       $('#intro-content').append(`
         <h3>Resources</h3>
+        <br>
         <p>
           We release baseline implementations and checkpoints <a href="` + references["baselines"] + `" blank="_blank">here</a>.
           We use the English Wikipedia from 08/01/2019 following <a href="` + references["kilt"] + `" target="_blank">KILT</a>
@@ -84,6 +85,7 @@
       $('.panel').css("margin-right", "10px");
       $('#intro-content').append(`
         <h3>References</h3>
+        <br>
         <p>
           <ul>
             <li>For information-seeking questions and regular question-answer pairs, we use ` +
