@@ -46,9 +46,9 @@
       `);
 
       // load download cards
-      let card1 = loadDownloadCard("A Set [train/dev] (13MB)");
-      let card2 = loadDownloadCard("R Set [train/dev/test] (205MB)");
-      let card3 = loadDownloadCard_single("WikipediaDB.jsonl (10GB)");
+      let card1 = loadDownloadCard("A Set [train/dev] (13MB)", 'https://nlp.cs.washington.edu/ambigqa/data/A_set.zip');
+      let card2 = loadDownloadCard("R Set [train/dev/test] (205MB)", 'https://nlp.cs.washington.edu/ambigqa/data/R_set.zip');
+      let card3 = loadDownloadCard_single("WikipediaDB.jsonl (10GB)", 'https://nlp.cs.washington.edu/ambigqa/data/wikipedia_20190801.jsonl');
       $('#intro-content').append('<hr>');
       $('#intro-content').append(`
         <h3>Data</h3>
@@ -111,7 +111,7 @@
     });
   });
 
-  function loadDownloadCard(title, text, url, mem) {
+  function loadDownloadCard(title, url) {
     // return `<div class="panel panel-default panel-inline download-card" style="float: left">
     //   <div class="panel-heading"><a href="` + url + `">
     //     ` + title + ` </a>
@@ -123,7 +123,7 @@
     </div>`
   }
 
-  function loadDownloadCard_single(title, text, url, mem) {
+  function loadDownloadCard_single(title, url) {
     // return `<div class="panel panel-default panel-inline download-card" style="float: left">
     //   <div class="panel-heading"><a href="` + url + `">
     //     ` + title + ` </a>
