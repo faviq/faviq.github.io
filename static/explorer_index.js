@@ -109,7 +109,11 @@
           <p><span class="label label-text">Text</span> ` + data['positive_evidence']['text'] + `</p>
       `;
     $('#content').append(getPanel("Positive Passage", htmlText_pos));
-    $('#content').append('<h4>&#8251 Note that the positive passage is not golden, but is the one retrieved from TF-IDF (the top passage that contains the answer to the original question).</h4>');
+    $('#content').append(`<h5>
+      &#8251 Note that the positive passage is not groundtruth,
+      but is obtained through TF-IDF and post-processing (details in Appendix C.2 of the paper).
+      'N/A' indicates TF-IDF fails to retrieve any reasonable passage.
+      </h5>`);
     
     // htmlText_neg = `
     //       <p><span class="label label-id">ID</span> ` + data['negative_evidence']['id'] + `</p>
