@@ -21,7 +21,7 @@
   function loadAllData(){
     $('.textbox').width($('#sidebar').width());
 
-    $.getJSON("https://raw.githubusercontent.com/faviq/faviq.github.io/main/static/samples.json", function(json) {
+    $.getJSON("https://raw.githubusercontent.com/faviq/faviq.github.io/main/static/samples_web.json", function(json) {
       allData = json; 
       loadData();
     });
@@ -59,21 +59,21 @@
     let mode = parseInt($('.mode:checked').val());
     ('.textbox-clicked');
     if (mode===0) {
-      $('.D_set').show();
+      $('.R_set').show();
       $('.A_set').hide();
       if (getCurrentClassName()==="A_set") {
         $('.textbox-clicked').removeClass('textbox-clicked');
         $('#content').html('');
       }
     } else if (mode===1) {
-      $('.D_set').hide();
+      $('.R_set').hide();
       $('.A_set').show();
-      if (getCurrentClassName()==="D_set") {
+      if (getCurrentClassName()==="R_set") {
         $('.textbox-clicked').removeClass('textbox-clicked');
         $('#content').html('');
       }
     } else {
-      $('.D_set').show();
+      $('.R_set').show();
       $('.A_set').show();
     }
    }
@@ -81,7 +81,7 @@
   function getClassName(data) {
     //FIXME later
     if (data['div']==="a_set") {
-      return "D_set"
+      return "R_set"
     } else {
       return "A_set"
     }
@@ -102,6 +102,8 @@
     let data = allData[currentId];
     $('#content').append(getPanel("Claim", data["claim"]));
     $('#content').append(getPanel("Label", data["label"]));
+    $('#content').append(getPanel("Question", data["question"]));
+    $('#content').append(getPanel("Answer", data["answer"]));
   
     htmlText_pos = `
           <p><span class="label label-id">ID</span> ` + data['positive_evidence']['id'] + `</p>

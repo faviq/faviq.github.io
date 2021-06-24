@@ -15,7 +15,8 @@
     "kilt":"https://arxiv.org/pdf/2009.02252.pdf",
     "readme":"https://github.com/faviq#faviq",
     "baselines":"https://github.com/faviq/faviq/tree/main/codes",
-    "request-test-data": "https://github.com/faviq#request-test-data"
+    "request-test-data": "https://github.com/faviq#request-test-data",
+    "fact_correction":"https://arxiv.org/pdf/2012.15788.pdf"
   };
 
   $( window ).init(function(){
@@ -46,9 +47,11 @@
       `);
 
       // load download cards
-      let card1 = loadDownloadCard("A Set [train/dev] (13MB)", 'https://nlp.cs.washington.edu/ambigqa/data/A_set.zip');
-      let card2 = loadDownloadCard("R Set [train/dev/test] (205MB)", 'https://nlp.cs.washington.edu/ambigqa/data/R_set.zip');
+      let card1 = loadDownloadCard("A Set [train/dev] (13MB)", 'https://nlp.cs.washington.edu/ambigqa/data/faviq_a_set.zip');
+      let card2 = loadDownloadCard("R Set [train/dev/test] (100MB)", 'https://nlp.cs.washington.edu/ambigqa/data/faviq_r_set.zip');
       let card3 = loadDownloadCard_single("WikipediaDB.jsonl (10GB)", 'https://nlp.cs.washington.edu/ambigqa/data/wikipedia_20190801.jsonl');
+      let card4 = loadDownloadCard("Fact Correction - A Set [train/dev] (482KB)", 'https://nlp.cs.washington.edu/ambigqa/data/fact_correction_a_set.zip');
+      let card5 = loadDownloadCard("Fact Correction - R Set [train/dev/test] (2.9MB)", 'https://nlp.cs.washington.edu/ambigqa/data/fact_correction_r_set.zip');
       $('#intro-content').append('<hr>');
       $('#intro-content').append(`
         <h3>Data</h3>
@@ -80,6 +83,14 @@
         </p>
       `);
       $('#intro-content').append("<div class='readme row' style='width: 50%; margin: 0 auto;'>" + card3 + "</div>");
+      $('#intro-content').append(` 
+        <p>
+        We further modify and release the FaVIQ in fact correction task format, a task recently studied in this <a href="` + references["fact_correction"] + `" target="_blank">paper</a> that requires a model to correct the refuted claims.
+        The modified dataset consists of instances with the refuted claim and a list of corrected claims.
+        We hope the release will be helpful for future research on the task. 
+        </p>
+      `);
+      $('#intro-content').append("<div class='readme row' style='margin-top: 10px;'>" + card3 + card4 + "</div>");
       $('#intro-content').append('<hr>');
       $('.panel').width($('#intro-content').width()/3-30);
       $('.panel').css("margin-right", "10px");
