@@ -90,7 +90,7 @@
         We hope the release will be helpful for future research on the task. 
         </p>
       `);
-      $('#intro-content').append("<div class='readme row' style='margin-top: 10px;'>" + card3 + card4 + "</div>");
+      $('#intro-content').append("<div class='readme row' style='margin-top: 10px;'>" + card4 + card5 + "</div>");
       $('#intro-content').append('<hr>');
       $('.panel').width($('#intro-content').width()/3-30);
       $('.panel').css("margin-right", "10px");
