@@ -81,14 +81,17 @@
           Download it here!
           Please refer to the paper for the details of the baselines and how we use Wikipedia as knowledge sources.
         </p>
+        <br>
       `);
       $('#intro-content').append("<div class='readme row' style='width: 50%; margin: 0 auto;'>" + card3 + "</div>");
       $('#intro-content').append(` 
+        <br>
         <p>
         We further modify and release the FaVIQ in fact correction task format, a task recently studied in this <a href="` + references["fact_correction"] + `" target="_blank">paper</a> that requires a model to correct the refuted claims.
         The modified dataset consists of instances with the refuted claim and a list of corrected claims.
         We hope the release will be helpful for future research on the task. 
         </p>
+        <br>
       `);
       $('#intro-content').append("<div class='readme row' style='margin-top: 10px;'>" + card4 + card5 + "</div>");
       $('#intro-content').append('<hr>');
