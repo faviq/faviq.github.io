@@ -87,9 +87,9 @@
       $('#intro-content').append(` 
         <br>
         <p>
-        We further modify and release the FaVIQ in fact correction task format, a task recently studied in this <a href="` + references["fact_correction"] + `" target="_blank">paper</a> that requires a model to correct the refuted claims.
-        The modified dataset consists of instances with the refuted claim and a list of corrected claims.
-        We hope the release will be helpful for future research on the task. 
+        We also release the fact correction version of FaVIQ, a task recently studied in <a href="` + references["fact_correction"] + `" target="_blank">Thorne & Vlachos (2020)</a>
+        that requires a model to correct the refuted claims. The data consists of the refute claim as the input and a list of corrected claims as the output.
+        We hope this data will be helpful for future research on the fact correction task. 
         </p>
         <br>
       `);
