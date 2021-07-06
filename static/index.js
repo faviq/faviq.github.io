@@ -7,7 +7,7 @@
   let references = {
     "nq": "https://www.mitpressjournals.org/doi/pdf/10.1162/tacl_a_00276",
     "ambigQA": "https://arxiv.org/pdf/2004.10645.pdf",
-    "ours": "",
+    "ours": "https://arxiv.org/pdf/2107.02153.pdf",
     "ours-bibtex": "https://raw.githubusercontent.com/faviq/faviq/main/park2021faviq.txt",
     "dpr": "https://arxiv.org/pdf/2004.04906.pdf",
     "drqa_github": "https://github.com/facebookresearch/DrQA/tree/master/scripts/retriever",
