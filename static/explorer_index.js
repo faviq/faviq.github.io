@@ -113,7 +113,7 @@
     $('#content').append(getPanel("Positive Passage", htmlText_pos));
     $('#content').append(`<h5>
       &#8251 Note that the positive passage is not groundtruth,
-      but is obtained through TF-IDF and post-processing (details in Appendix C.2 of the paper).
+      but is obtained through TF-IDF and post-processing (details in Section 4.1.1 of the paper).
       'N/A' indicates TF-IDF fails to retrieve any reasonable passage.
       </h5>`);
     
