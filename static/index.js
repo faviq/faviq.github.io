@@ -51,7 +51,7 @@
         <h3>Update</h3>
         <br>
         <p>
-        <em> Update (Nov 2021) </em> We updated the negative silver evidence for the refute samples.  
+        <b> Update (Nov 2021) </b> We updated the negative silver evidence for the refute samples.  
         </p>
       `);
 
