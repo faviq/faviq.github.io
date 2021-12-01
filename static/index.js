@@ -51,13 +51,13 @@
         <h3>Update</h3>
         <br>
         <p>
-        <b> Update (Nov 2021) </b> We updated the negative silver evidence for the refute samples.  
+        <b> Update (Nov 2021) </b> We updated the positive/negative silver evidence for the refute samples.  
         </p>
       `);
 
       // load download cards
-      let card1 = loadDownloadCard("A Set [train/dev] (13MB)", 'https://nlp.cs.washington.edu/ambigqa/data/faviq_a_set_v1.1.zip');
-      let card2 = loadDownloadCard("R Set [train/dev/test] (100MB)", 'https://nlp.cs.washington.edu/ambigqa/data/faviq_r_set_v1.1.zip');
+      let card1 = loadDownloadCard("A Set [train/dev] (13MB)", 'https://nlp.cs.washington.edu/ambigqa/data/faviq_a_set_v1.2.zip');
+      let card2 = loadDownloadCard("R Set [train/dev/test] (100MB)", 'https://nlp.cs.washington.edu/ambigqa/data/faviq_r_set_v1.2.zip');
       let card3 = loadDownloadCard_single("WikipediaDB.jsonl (10GB)", 'https://nlp.cs.washington.edu/ambigqa/data/wikipedia_20190801.jsonl');
       let card4 = loadDownloadCard("Fact Correction - A Set [train/dev] (482KB)", 'https://nlp.cs.washington.edu/ambigqa/data/fact_correction_a_set.zip');
       let card5 = loadDownloadCard("Fact Correction - R Set [train/dev/test] (2.9MB)", 'https://nlp.cs.washington.edu/ambigqa/data/fact_correction_r_set.zip');
